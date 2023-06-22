@@ -14,10 +14,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div
-        id={`${isExpand ? 'open' : 'false'}`}
-        className="h-20 flex items-center navigation_bar p-4 justify-end lg:justify-center">
-        <ul className="hidden lg:flex lg:flex-row gap-4 my-6 justify-center text-white">
+      <div id={`${isExpand ? 'open' : 'close'}`} className="relative p-6">
+        <ul className="navbar text-white">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -27,19 +25,17 @@ const Navbar = () => {
           <li>
             <Link to="/experience">Experience</Link>
           </li>
+          <CgClose
+            className={`close-btn text-white text-3xl`}
+            onClick={() => setIsExpand((prev) => !prev)}
+          />
         </ul>
-        <HiMenuAlt3
-          className={`text-white text-3xl lg:hidden ${
-            isExpand ? 'hidden' : 'block'
-          }`}
-          onClick={() => setIsExpand(!isExpand)}
-        />
-        <CgClose
-          className={`text-white text-3xl lg:hidden ${
-            isExpand ? 'block' : 'hidden'
-          }`}
-          onClick={() => setIsExpand(!isExpand)}
-        />
+        <div>
+          <HiMenuAlt3
+            className={`open-btn text-white text-3xl`}
+            onClick={() => setIsExpand((prev) => !prev)}
+          />
+        </div>
       </div>
     </>
   );

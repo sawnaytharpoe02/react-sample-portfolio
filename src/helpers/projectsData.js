@@ -9,8 +9,8 @@ export const ProjectLists = [
     name: 'Todo App With Local Storage',
     slug: 'Todo-App-With-Local-Storage',
     image: Proj1,
-    skills: 'JavaScript,HTML,CSS',
-    link: '',
+    skills: 'JavaScript,ReactJS',
+    link: 'https://github.com/sawnaytharpoe02/todoApp-LocalStorage',
   },
   {
     name: 'Movie Sample Website',
@@ -38,6 +38,6 @@ export const ProjectLists = [
     slug: 'Portfolio-Website',
     image: Proj5,
     skills: 'ReactJS',
-    link: 'something',
+    link: 'https://github.com/sawnaytharpoe02/react-sample-portfolio',
   },
 ];
