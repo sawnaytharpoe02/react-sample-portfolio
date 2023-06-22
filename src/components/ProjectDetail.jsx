@@ -9,7 +9,6 @@ const ProjectDetail = () => {
   const slug = pathname.split('/').pop();
 
   const navigate = useNavigate();
-
   const project = ProjectLists.filter((p) => p.slug === slug);
 
   return (
@@ -29,7 +28,9 @@ const ProjectDetail = () => {
           className="h-full rounded"
         />
         <p>Skills - {project[0].skills}</p>
-        <AiFillGithub className="text-4xl" />
+        <a href={project[0].link}>
+          <AiFillGithub className="text-4xl cursor-pointer" />
+        </a>
       </div>
     </div>
   );

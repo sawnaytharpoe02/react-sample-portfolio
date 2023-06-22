@@ -1,5 +1,5 @@
 import React from 'react';
-import { skills } from '../../data';
+import { skills } from '../../helpers/data';
 
 const Skills = () => {
   const { frontend, backend, languages } = skills;
